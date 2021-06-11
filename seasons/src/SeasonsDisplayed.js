@@ -11,11 +11,15 @@ const getSeason = (lat, month) => {
 const SeasonsDisplayed = (props) => {
     const season = getSeason(props.lat, new Date().getMonth());
     const message = season === 'winter' ? 'Burr, it is chilly' : 'Lets hit the beach'
-    console.log(season);
+    const icon = season === 'winter' ? 'snowflake' : 'sun';
 
-    return <div>
-    <h1>{message}</h1>
-    </div>;
+    return (
+    <div>
+        <i className={`${icon} icon`}/>
+        <h1>{message}</h1>
+        <i className={`${icon} icon`}/>
+    </div>
+    );
 };
 
 export default SeasonsDisplayed;
