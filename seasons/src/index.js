@@ -27,7 +27,7 @@ class App extends React.Component {
                 return <SeasonsDisplay lat={this.state.lat} />
             }
             
-            return <Spinner/>
+            return <Spinner message="Please accept location request"/>
     }
 }
 
